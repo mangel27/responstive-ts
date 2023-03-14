@@ -19,12 +19,12 @@ const FeatureItem = [
     },
     {
         statNumber: "3 Crore+",
-        statLabel: "Winnings everyday",
+        statLabel: "in Winning daily",
         icon: <HiOutlineUserGroup size="30px" />
     },
     {
         statNumber: "100+",
-        statLabel: "Everyday Coupons",
+        statLabel: "Everyday Contest",
         icon: <ImTicket size="30px" />
     }
 ];
@@ -59,8 +59,9 @@ const FeatureCard = (props: {
 const Features = () => {
     return (
         <SimpleGrid columns={3} spacing={0} bg="blue.900" w="100%">
-            {FeatureItem.map((item) => (
+            {FeatureItem.map((item, index) => (
                 <FeatureCard
+                    key={index + "feature"}
                     statNumber={item.statNumber}
                     statLabel={item.statLabel}
                     icon={item.icon}

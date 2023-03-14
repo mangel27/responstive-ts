@@ -28,32 +28,15 @@ const Hero = () => {
                     <Text
                         color={"white"}
                         fontWeight={700}
+                        textAlign="center"
                         lineHeight={1.2}
                         fontSize={useBreakpointValue({
                             base: "3xl",
                             md: "4xl"
                         })}
                     >
-                        Play Fantasy Sports and Win upto 2 Crore + Daily
+                        Play Fantasy Sports and Win upto 10 Lakh Daily
                     </Text>
-                    <Stack direction={"row"}>
-                        <Button
-                            bg={"blue.400"}
-                            rounded={"full"}
-                            color={"white"}
-                            _hover={{ bg: "blue.500" }}
-                        >
-                            Show me more
-                        </Button>
-                        <Button
-                            bg={"whiteAlpha.300"}
-                            rounded={"full"}
-                            color={"white"}
-                            _hover={{ bg: "whiteAlpha.500" }}
-                        >
-                            Show me more
-                        </Button>
-                    </Stack>
                 </Stack>
             </VStack>
         </Flex>

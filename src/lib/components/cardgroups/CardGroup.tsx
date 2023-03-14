@@ -21,21 +21,16 @@ const SimpleCard = (props: FeatureProps) => {
         <Stack
             borderWidth="1px"
             textAlign={"center"}
-            px={4}
-            py={10}
+            p={5}
             bg={cardColors[index]}
             color={useColorModeValue("white", "gray.200")}
             rounded="lg"
             justifyContent={"space-around"}
             shadow="lg"
             minW={["46%", "30%"]}
-            minH="300px"
+            height={"200px"}
         >
-            <Box mx="auto" w="100%">
-                <Icon as={icon} w={12} h={12} color={"white"} />
-            </Box>
-
-            <Text fontWeight={600} fontSize="xl">
+            <Text fontWeight={500} fontSize="md">
                 {title}
             </Text>
             <Text>{text}</Text>

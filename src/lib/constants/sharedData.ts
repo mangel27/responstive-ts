@@ -18,19 +18,24 @@ export const NAV_ITEMS: Array<NavItem> = [
     },
 ];
 export const FANTASY_BENEFITS: Array<benefitItem> = [{
-    title: "Instant Withdrawal",
-    text: "Enjoy lightning fast withdrawal experience",
-    icon: TbCricket
+    title: "Deposit Offer",
+    text: "Get League Join offer on 1st Deposit"
+    // icon: TbCricket
 },
 {
-    title: "Unique Team Creation",
-    text: "Now you can select only 1 player from Bat, Bwl, AllR, WK",
-    icon: TbCricket
+    title: "Signup Offer",
+    text: "Get Rs 250 Discount on Registration"
+    //icon: TbCricket
 },
 {
-    title: "VIP",
-    text: "Pay lowest entry fee & get upto 100% winnings",
-    icon: TbCricket
+    title: "Refer & Earn",
+    text: "Earn upto 13000 everytime you refer friend"
+    // icon: TbCricket
+},
+{
+    title: "4+1 Offer",
+    text: "Join with 4 & get 5th Entry Free"
+    // icon: TbCricket
 }]
 export const cardColors = [
     "green.300", "red.300", "blue.300", "yellow.300", "purple.300", "pink.300", "orange.300", "cyan.300", "teal.300", "gray.300"

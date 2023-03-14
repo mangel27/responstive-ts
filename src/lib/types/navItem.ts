@@ -7,5 +7,4 @@ export interface NavItem {
 export interface benefitItem {
     title: string;
     text: string;
-    icon: any;
 }

@@ -23,14 +23,12 @@ const Home = () => {
             <Hero />
             <Features />
             <CardGroup
-                title={"Gamezy Fantasy Benefits"}
+                title={"Earn more with HalaPlay"}
                 cards={FANTASY_BENEFITS}
             />
-            <CardGroup
-                title={"Other Fantasy Benefits"}
-                cards={FANTASY_BENEFITS}
-            />
-            <StepsToPlay title={"It's easy to start playing on Halaplay"} />
+            <CardGroup title={"Halaplay Benefits"} cards={FANTASY_BENEFITS} />
+
+            <StepsToPlay title={"How to create team?"} />
             <FAQSegment title={"Frequently Asked Questions"} data={FAQ_ITEMS} />
             <Testimonials />
         </Flex>
