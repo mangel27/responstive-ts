@@ -1,18 +1,26 @@
-import { Box, Heading, useColorModeValue } from "@chakra-ui/react";
-import TestimonialCard from "./TestimonialCard";
+import { Box, Heading, Flex, useColorModeValue } from "@chakra-ui/react";
 import Carousel from "~/lib/patterns/Carousel";
+import SimpleCard from "../cardLayout/SimpleCard";
+import { FANTASY_BENEFITS } from "~/lib/constants/sharedData";
 
-const Testimonials = (props: { title: string; cards: any }) => {
+const BenefitsSection = (props: { title: string; cards: any }) => {
     const { title, cards } = props;
     const getSlides = () => {
         let slides: JSX.Element[] = [];
         cards.map((slide, index) => {
             slides.push(
-                <TestimonialCard children={slide} key={"card" + index} />
+                <SimpleCard
+                    title={slide.title}
+                    text={slide.text}
+                    index={index}
+                    mx="2em"
+                    key={"card" + index}
+                />
             );
         });
         return slides;
     };
+
     return (
         <Box
             px={["5vw", "10vw"]}
@@ -27,9 +35,9 @@ const Testimonials = (props: { title: string; cards: any }) => {
                     infinite: true,
                     swipeToSlide: true,
                     speed: 500,
-                    autoplay: true,
-                    slidesToShow: 2,
-                    slidesToScroll: 1,
+                    autoplay: false,
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
                     initialSlide: 1,
                     adaptiveHeight: true,
 
@@ -64,4 +72,4 @@ const Testimonials = (props: { title: string; cards: any }) => {
         </Box>
     );
 };
-export default Testimonials;
+export default BenefitsSection;
