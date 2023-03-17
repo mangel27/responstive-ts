@@ -90,7 +90,7 @@ const TestimonialAvatar = ({
 
 const Testimonials = () => {
     return (
-        <Box bg={useColorModeValue("gray.100", "gray.700")}>
+        <Box w={'full'}>
             <Container maxW={"7xl"} py={16} as={Stack} spacing={12}>
                 <Stack spacing={0} align={"center"}>
                     <Heading>Hear it from our winners</Heading>

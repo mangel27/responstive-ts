@@ -2,3 +2,10 @@
 .noScrollBar::-webkit-scrollbar {
     display: none;
 }
+
+#myPopup {
+    transition: 0.5s;
+    -moz-transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+}

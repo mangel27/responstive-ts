@@ -65,12 +65,12 @@ const DesktopNav = () => {
         <Stack direction="row" spacing={4}>
             {NAV_ITEMS.map((navItem) => (
                 <Box key={navItem.label}>
-                    <Popover trigger="hover" placement="bottom-start">
+                    <Popover trigger="hover" placement="bottom-start" >
                         <PopoverTrigger>
                             <Link
                                 p={2}
                                 href={navItem.href ?? "#"}
-                                fontSize="sm"
+                                fontSize="md"
                                 fontWeight={500}
                                 color={linkColor}
                                 _hover={{

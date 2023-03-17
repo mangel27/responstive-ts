@@ -10,7 +10,8 @@ import {
     Collapse,
     useColorModeValue,
     useBreakpointValue,
-    useDisclosure
+    useDisclosure,
+    Image
 } from "@chakra-ui/react";
 
 import DesktopNav from "./DesktopNav";
@@ -19,94 +20,94 @@ import MobileNav from "./MobileNav";
 const Header = () => {
     const { isOpen, onToggle } = useDisclosure();
     return (
-        <Box>
-            <Flex
-                as="header"
-                bg={useColorModeValue("purple.500", "white")}
-                color={useColorModeValue("white", "white")}
-                minH="60px"
-                py={{ base: 2 }}
-                px={{ base: 4 }}
-                borderBottom={1}
-                borderStyle="solid"
-                borderColor={useColorModeValue("gray.200", "gray.900")}
-                align="center"
-            >
+        <>
+            <Box>
                 <Flex
-                    flex={{ base: 1, md: "auto" }}
-                    ml={{ base: -2 }}
-                    display={{ base: "flex", md: "none" }}
+                    as="header"
+                    bg={useColorModeValue("purple.500", "#4a00eb")}
+                    color={useColorModeValue("white", "white")}
+                    minH="60px"
+                    py={{ base: 2 }}
+                    px={{ base: 4 }}
+                    borderBottom={1}
+                    borderStyle="solid"
+                    borderColor={useColorModeValue("gray.200", "gray.900")}
+                    align="center"
                 >
-                    <IconButton
-                        onClick={onToggle}
-                        icon={
-                            isOpen ? (
-                                <CloseIcon w={3} h={3} />
-                            ) : (
-                                <HamburgerIcon w={5} h={5} />
-                            )
-                        }
-                        variant="ghost"
-                        aria-label="Toggle Navigation"
-                    />
-                </Flex>
-                <Flex
-                    flex={{ base: 1 }}
-                    justify={{ base: "center", md: "start" }}
-                >
-                    <Text
-                        textAlign={useBreakpointValue({
-                            base: "center",
-                            md: "left"
-                        })}
-                        fontFamily="heading"
-                        color={useColorModeValue("white", "white")}
+                    <Flex
+                        flex={{ base: 1, md: "auto" }}
+                        ml={{ base: -2 }}
+                        display={{ base: "flex", md: "none" }}
                     >
-                        HALAPLAY
-                    </Text>
-
-                    <Flex display={{ base: "none", md: "flex" }} ml={10}>
-                        <DesktopNav />
+                        <IconButton
+                            onClick={onToggle}
+                            icon={
+                                isOpen ? (
+                                    <CloseIcon w={3} h={3} />
+                                ) : (
+                                    <HamburgerIcon w={5} h={5} />
+                                )
+                            }
+                            variant="ghost"
+                            aria-label="Toggle Navigation"
+                        />
                     </Flex>
+                    <Flex
+                        flex={{ base: 1 }}
+                        justify={{ base: "center", md: "start" }}
+                    >
+                        <Image
+                            alignSelf={useBreakpointValue({
+                                base: "center",
+                                md: "left"
+                            })}
+                            w={'75px'}
+                            h={'75px'}
+                            src='https://d15boxbdv4z6lv.cloudfront.net/1_small_100.png' />
+
+                        <Flex display={{ base: "none", md: "flex" }} ml={10} mt={6}>
+                            <DesktopNav />
+                        </Flex>
+                    </Flex>
+
+                    <Stack
+                        flex={{ base: 1, md: 0 }}
+                        justify="flex-end"
+                        direction="row"
+                        spacing={6}
+                    >
+                        <Button
+                            as="a"
+                            fontSize="sm"
+                            fontWeight={400}
+                            variant="link"
+                            color="white"
+                            href="#"
+                        >
+                            Sign In
+                        </Button>
+                        <Button
+                            as="a"
+                            display={{ base: "none", md: "inline-flex" }}
+                            fontSize="sm"
+                            fontWeight={600}
+                            color="white"
+                            bg="pink.400"
+                            href="#"
+                            _hover={{
+                                bg: "pink.300"
+                            }}
+                        >
+                            Sign Up
+                        </Button>
+                    </Stack>
                 </Flex>
 
-                <Stack
-                    flex={{ base: 1, md: 0 }}
-                    justify="flex-end"
-                    direction="row"
-                    spacing={6}
-                >
-                    <Button
-                        as="a"
-                        fontSize="sm"
-                        fontWeight={400}
-                        variant="link"
-                        color="white"
-                        href="#"
-                    >
-                        Sign In
-                    </Button>
-                    <Button
-                        as="a"
-                        display={{ base: "none", md: "inline-flex" }}
-                        fontSize="sm"
-                        fontWeight={600}
-                        color="white"
-                        bg="pink.400"
-                        href="#"
-                        _hover={{
-                            bg: "pink.300"
-                        }}
-                    >
-                        Sign Up
-                    </Button>
-                </Stack>
-            </Flex>
-
-            <Collapse in={isOpen} animateOpacity>
-                <MobileNav />
-            </Collapse>
-        </Box>
+                <Collapse in={isOpen} animateOpacity>
+                    <MobileNav />
+                </Collapse>
+            </Box>
+        </>
     );
 };
 

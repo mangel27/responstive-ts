@@ -2,6 +2,8 @@ import { useState } from "react";
 import { Box, Flex, Heading, Text } from "@chakra-ui/react";
 import Collapsible from "react-collapsible";
 import { AiFillCloseCircle, AiFillPlusCircle } from "react-icons/ai";
+
+
 type FAQRowProps = {
     row: any;
     index: number;
@@ -16,12 +18,13 @@ const FAQRow = (props: FAQRowProps) => {
 
     return (
         <Box
-            bg="gray.300"
+            bg="gray.100"
             minH="70px"
-            p="12px"
+            p="22px"
             pl="20px"
-            boxShadow="xl"
-            mt="2px"
+            boxShadow="md"
+            mt="20px"
+            mb="25px"
         >
             <Collapsible
                 open={currentOpen === index}
@@ -35,7 +38,7 @@ const FAQRow = (props: FAQRowProps) => {
                 trigger={
                     <Flex align="center" w="100%">
                         <Text
-                            fontSize={["14px", "14px", "14px", "18px"]}
+                            fontSize={["16px", "16px", "16px", "18px"]}
                             color="grey.900"
                             textAlign="left"
                         >
@@ -43,12 +46,12 @@ const FAQRow = (props: FAQRowProps) => {
                         </Text>
 
                         <Box ml="auto">
-                            <Icon style={{ fill: "black" }} />
+                            <Icon style={{ fill: "#2C1758", fontSize: "30px" }} />
                         </Box>
                     </Flex>
                 }
             >
-                <Text mt="4px" color="grey.900" textAlign="left">
+                <Text mt="6px" color="grey.900" textAlign="left">
                     {row.answer}
                 </Text>
             </Collapsible>

@@ -1,4 +1,4 @@
-import { Flex } from "@chakra-ui/react";
+import { Flex, Box } from "@chakra-ui/react";
 import { NextSeo } from "next-seo";
 import CardGroup from "~/lib/components/cardgroups/CardGroup";
 import FAQSegment from "~/lib/components/faqsegment/FAQSegment";
@@ -28,7 +28,7 @@ const Home = () => {
             />
             <CardGroup title={"Halaplay Benefits"} cards={FANTASY_BENEFITS} />
 
-            <StepsToPlay title={"How to create team?"} />
+            <StepsToPlay title={"Steps to Play"} />
             <FAQSegment title={"Frequently Asked Questions"} data={FAQ_ITEMS} />
             <Testimonials />
         </Flex>

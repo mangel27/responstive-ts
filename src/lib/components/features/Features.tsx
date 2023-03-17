@@ -36,7 +36,7 @@ const FeatureCard = (props: {
 }) => {
     const { statNumber, statLabel, icon } = props;
     return (
-        <Stat px={{ base: 2, md: 6 }} py={"5"} shadow={"xl"}>
+        <Stat px={{ base: 2, md: 6 }} py={"5"} >
             <Flex justifyContent={"center"}>
                 <Box my={"auto"} color={useColorModeValue("white", "gray.200")}>
                     {icon}
@@ -58,7 +58,7 @@ const FeatureCard = (props: {
 };
 const Features = () => {
     return (
-        <SimpleGrid columns={3} spacing={0} bg="blue.900" w="100%">
+        <SimpleGrid columns={[1, 3]} spacing={0} bg="blue.900" w="100%">
             {FeatureItem.map((item, index) => (
                 <FeatureCard
                     key={index + "feature"}
